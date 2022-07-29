@@ -5,7 +5,7 @@
     <AssemblyTitle>FastMember</AssemblyTitle>
     <Version>1.5.0</Version>
     <Authors>Marc Gravell</Authors>
-    <TargetFrameworks>netstandard2.0;net461;netcoreapp2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net461;net48;netcoreapp2.1;net6.0</TargetFrameworks>
     <AssemblyName>FastMember</AssemblyName>
     <PackageTags>Reflection;Dynamic;Member;Access</PackageTags>
     <PackageReleaseNotes>core-clr support (rtm)</PackageReleaseNotes>
@@ -20,6 +20,9 @@
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)'=='net461'">
     <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net48'">
+	  <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
